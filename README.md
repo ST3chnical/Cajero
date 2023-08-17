@@ -34,6 +34,6 @@ El Cajero Automático es una herramienta simple para registrar compras y ventas.
 
 4. **Interactúa**: Sigue las instrucciones en la terminal para interactuar con el Cajero Automático. Utiliza los números para seleccionar las opciones del menú.
 
-Espero que esta guía te ayude a entender y utilizar nuestro Cajero Automático de manera efectiva. ¡Diviértete gestionando tus compras y ventas! Si tienes alguna pregunta o inquietud, no dudes en contactarnos.
+Espero que esta guía te ayude a entender y utilizar este Cajero Automático de manera efectiva. ¡Diviértete gestionando tus compras y ventas! Si tienes alguna pregunta o inquietud, no dudes en comentarme.
 
 ¡Gracias por probar este mini proyecto! 🙌
