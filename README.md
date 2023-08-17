@@ -22,7 +22,7 @@ El Cajero Automático es una herramienta simple para registrar compras y ventas.
 
 1. **Requisitos**: Asegúrate de tener Python instalado en tu computadora.
 
-2. **Descarga del Código**: Descarga el código del Cajero Automático desde el [repositorio GitHub](https://github.com/tuusuario/tuproyecto).
+2. **Descarga del Código**: Descarga el código del Cajero Automático desde el [repositorio GitHub](https://github.com/ST3chnical/Cajero).
 
 3. **Ejecución**:
    - Abre una terminal en la ubicación donde guardaste el archivo del Cajero Automático.
@@ -30,7 +30,7 @@ El Cajero Automático es una herramienta simple para registrar compras y ventas.
      ```bash
      python main.py
      ```
-     Reemplaza `nombre_del_archivo.py` con el nombre real del archivo.
+     
 
 4. **Interactúa**: Sigue las instrucciones en la terminal para interactuar con el Cajero Automático. Utiliza los números para seleccionar las opciones del menú.
 
