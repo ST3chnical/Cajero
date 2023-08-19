@@ -40,18 +40,18 @@ def main():
 
         if option == "1":
             product = input("Ingrese el nombre del producto: ")
-            quantity = int(input("Ingrese la quantity: "))
-            price = float(input("Ingrese el price por unidad: "))
+            quantity = int(input("Ingrese la cantidad: "))
+            price = float(input("Ingrese el precio por unidad: "))
             atm.register_purchase(product, quantity, price)
         elif option == "2":
             product = input("Ingrese el nombre del producto: ")
-            quantity = int(input("Ingrese la quantity: "))
-            price = float(input("Ingrese el price por unidad: "))
+            quantity = int(input("Ingrese la cantidad: "))
+            price = float(input("Ingrese el precio por unidad: "))
             atm.register_sale(product, quantity, price)
         elif option == "3":
             atm.see_inventory()
         elif option == "4":
-            print("Gracias por usar el atm.")
+            print("Gracias por usar el cajero.")
             break
         else:
             print("Opción inválida. Por favor, seleccione una opción válida.")
