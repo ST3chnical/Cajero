@@ -1,59 +1,61 @@
-class Cajero:
+class ATM:
     def __init__(self):
-        self.inventario = {}
-        self.saldo = 0.0
+        self.inventory = {}
+        self.balance = 0.0
 
-    def registrar_compra(self, producto, cantidad, precio):
-        if producto in self.inventario:
-            self.inventario[producto] += cantidad
+    def register_purchase(self, product, quantity, price):
+        if product in self.inventory:
+            self.inventory[product] += quantity
         else:
-            self.inventario[producto] = cantidad
-        self.saldo -= cantidad * precio
-        print(f"Compra registrada: {cantidad} {producto}(s) a ${precio} cada uno.")
+            self.inventory[product] = quantity
+        self.balance -= quantity * price
+        print(f"Compra registrada: {quantity} {product}(s) a ${price} cada uno.")
 
-    def registrar_venta(self, producto, cantidad, precio):
-        if producto in self.inventario and self.inventario[producto] >= cantidad:
-            self.inventario[producto] -= cantidad
-            self.saldo += cantidad * precio
-            print(f"Venta registrada: {cantidad} {producto}(s) a ${precio} cada uno.")
+    def register_sale(self, product, quantity, price):
+        if product in self.inventory and self.inventory[product] >= quantity:
+            self.inventory[product] -= quantity
+            self.balance += quantity * price
+            print(f"Venta registrada: {quantity} {product}(s) a ${price} cada uno.")
         else:
             print("No hay suficiente inventario para realizar la venta.")
 
-    def ver_inventario(self):
+    def see_inventory(self):
         print("\nInventario:")
-        for producto, cantidad in self.inventario.items():
-            print(f"{producto}: {cantidad}")
-        print(f"Saldo actual: ${self.saldo}\n")
+        for product, quantity in self.inventory.items():
+            print(f"{product}: {quantity}")
+        print(f"Saldo actual: ${self.balance}\n")
+
 
 def main():
-    cajero = Cajero()
+    atm = ATM()
 
     while True:
-        print("Bienvenido al cajero")
+        print("Bienvenido al atm")
         print("1. Registrar compra")
         print("2. Registrar venta")
         print("3. Ver inventario")
         print("4. Salir")
 
-        opcion = input("Seleccione una opción: ")
+        option = input("Seleccione una opción: ")
 
-        if opcion == "1":
-            producto = input("Ingrese el nombre del producto: ")
-            cantidad = int(input("Ingrese la cantidad: "))
-            precio = float(input("Ingrese el precio por unidad: "))
-            cajero.registrar_compra(producto, cantidad, precio)
-        elif opcion == "2":
-            producto = input("Ingrese el nombre del producto: ")
-            cantidad = int(input("Ingrese la cantidad: "))
-            precio = float(input("Ingrese el precio por unidad: "))
-            cajero.registrar_venta(producto, cantidad, precio)
-        elif opcion == "3":
-            cajero.ver_inventario()
-        elif opcion == "4":
-            print("Gracias por usar el cajero.")
+        if option == "1":
+            product = input("Ingrese el nombre del producto: ")
+            quantity = int(input("Ingrese la quantity: "))
+            price = float(input("Ingrese el price por unidad: "))
+            atm.register_purchase(product, quantity, price)
+        elif option == "2":
+            product = input("Ingrese el nombre del producto: ")
+            quantity = int(input("Ingrese la quantity: "))
+            price = float(input("Ingrese el price por unidad: "))
+            atm.register_sale(product, quantity, price)
+        elif option == "3":
+            atm.see_inventory()
+        elif option == "4":
+            print("Gracias por usar el atm.")
             break
         else:
             print("Opción inválida. Por favor, seleccione una opción válida.")
+
 
 if __name__ == "__main__":
     main()
