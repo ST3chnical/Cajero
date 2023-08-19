@@ -30,7 +30,7 @@ def main():
     atm = ATM()
 
     while True:
-        print("Bienvenido al atm")
+        print("Bienvenido al Cajero")
         print("1. Registrar compra")
         print("2. Registrar venta")
         print("3. Ver inventario")
